@@ -1,0 +1,46 @@
+{
+  "name": "angular-ap-lateral-slide-menu_gh-pages",
+  "version": "0.0.1",
+  "keywords": [
+    "gh-pages"
+  ],
+  "homepage": "https://github.com/autreplanete/angular-ap-lateral-slide-menu",
+  "authors": [
+    "Thierry Charbonnel <thierry@creationflux.com>"
+  ],
+  "devDependencies": {
+    "http-server": "^0.6.1",
+    "bower": "^1.3.11",
+    "shelljs": "^0.2.6",
+    "load-grunt-tasks": "~0.6.0",
+    "grunt-contrib-uglify": "^0.6.0",
+    "grunt-contrib-less": "^0.11.0",
+    "grunt-contrib-copy": "^0.6.0",
+    "grunt-contrib-connect": "~0.8.0",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-shell": "^0.7.0",
+    "markdown": "~0.5.0",
+    "time-grunt": "~0.4.0",
+    "grunt-handlebars-layouts": "~0.1.1",
+    "handlebars-helper-moment": "*"
+  },
+  "engines": {
+    "node": "~0.10.1"
+  },
+  "description": "gh-pages for angular-ap-lateral-slide-menu",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/autreplanete/angular-ap-lateral-slide-menu.git"
+  },
+  "author": "Thierry Charbonnel <thierry@creationflux.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/autreplanete/angular-ap-lateral-slide-menu/issues"
+  }
+}

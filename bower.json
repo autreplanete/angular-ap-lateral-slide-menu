@@ -1,0 +1,27 @@
+{
+  "name": "angular-ap-lateral-slide-menu_gh-pages",
+  "version": "0.0.1",
+  "homepage": "https://github.com/autreplanete/angular-ap-lateral-slide-menu",
+  "authors": [
+    "Thierry Charbonnel <thierry@creationflux.com>"
+  ],
+  "description": "gh-pages",
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.2",
+    "font-awesome": "~4",
+    "jquery": "~2",
+    "svg-injector": "~1",
+    "html5shiv": "~3.7.2",
+    "respond": "~1.4.2"
+  }
+}
