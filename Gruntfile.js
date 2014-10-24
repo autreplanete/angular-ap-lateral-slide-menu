@@ -6,7 +6,7 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     banner: '/*!\n' +
-            ' * Cyberplus v<%= pkg.version %> (<%= pkg.homepage %>)\n' +
+            ' * <%= pkg.name %> v<%= pkg.version %> (<%= pkg.homepage %>)\n' +
             ' * Copyright 1994-<%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
             '* \n' +
             '*            .                                     .                                  \n' +
@@ -49,19 +49,32 @@ module.exports = function(grunt) {
             '* \n' +
             ' */\n',
     
+    clean: {
+      build: {
+        files: [{
+          dot: true,
+          src: [
+            'build/*',
+            '!build/.git*'
+          ]
+        }]
+      }
+    },
     
     uglify: {
       options: {
         banner: '<%= banner %>'
       },
       build: {
-        src: 'demo/js/<%= pkg.name %>.js',
-        dest: 'demo/js-min/<%= pkg.name %>.min.js'
+        src: 'src/<%= pkg.name %>.js',
+        dest: 'build/<%= pkg.name %>.min.js'
       }
     },
+    
     jshint: {
-    	all: ['Gruntfile.js', 'demo/js/**/*.js']
+    	all: ['Gruntfile.js', 'src/**/*.js']
   	},
+  	
     less: {
       options: {
         banner: '<%= banner %>',
@@ -72,44 +85,66 @@ module.exports = function(grunt) {
 				sourceMapFilename: 'demo/css/<%= pkg.name %>.css.map'
       },
       build: {
-        src: 'demo/less/<%= pkg.name %>.less',
-        dest: 'demo/css/<%= pkg.name %>.css'
+        src: 'src/less/<%= pkg.name %>.less',
+        dest: 'build/css/<%= pkg.name %>.css'
+      },
+      dev: {
+        src: 'src/less/<%= pkg.name %>.less',
+        dest: 'src/css/<%= pkg.name %>.css'
       }
     },
+    
     copy: {
       angular: {
         files: [
-            {
-              expand: true,
-              flatten: true,
-              src: ['bower_components/angular*/**/angular*.js'],
-              dest: 'demo/lib/'
-            },
-            {
-              expand: true,
-              flatten: true,
-              src: ['bower_components/angular*/**/angular*.map'],
-              dest: 'demo/lib/'
-            }
+          {
+            expand: true,
+            flatten: true,
+            src: ['bower_components/angular*/**/angular*.js'],
+            dest: 'demo/lib/'
+          },
+          {
+            expand: true,
+            flatten: true,
+            src: ['bower_components/angular*/**/angular*.map'],
+            dest: 'demo/lib/'
+          }
         ]
       },
       boostrapMixins: {
         files: [
-            {
-              expand: true,
-              flatten: true,
-              src: ['bower_components/bootstrap/less/mixins.less'],
-              dest: 'demo/less/bootstrap/'
-            },
-            {
-              expand: true,
-              flatten: true,
-              src: ['bower_components/bootstrap/less/mixins/*.less'],
-              dest: 'demo/less/bootstrap/mixins'
-            }
+          {
+            expand: true,
+            flatten: true,
+            src: ['bower_components/bootstrap/less/mixins.less'],
+            dest: 'src/less/bootstrap/'
+          },
+          {
+            expand: true,
+            flatten: true,
+            src: ['bower_components/bootstrap/less/mixins/*.less'],
+            dest: 'src/less/bootstrap/mixins'
+          }
         ]
-      }
+      },
+      build: {
+        files: [
+          {
+            expand: true,
+            flatten: true,
+            src: ['src/**/*.js'],
+            dest: 'build/'
+          },
+          {
+            expand: true,
+            flatten: true,
+            src: ['css/**/*.css'],
+            dest: 'build/css/'
+          }
+        ]
+      },
     },
+    
     shell: {
       build: {
         
@@ -128,7 +163,7 @@ module.exports = function(grunt) {
     
     watch: {
       less: {
-        files: ['demo/less/**/*.less', 'demo/**/*.html', 'demo/data/**/*.json', 'demo/js/**/*.js'],
+        files: ['demo/less/**/*.less', 'demo/**/*.html', 'demo/js/**/*.js'],
         tasks: ['less:dev', 'jshint']
       },
       options: {
@@ -139,12 +174,12 @@ module.exports = function(grunt) {
   });
 
   // Default task(s).
-  grunt.registerTask('default', ['less', 'uglify', 'jshint']);
+  grunt.registerTask('default', ['build']);
   
-  grunt.registerTask('init', ['copy']);
+  grunt.registerTask('init', ['clean', 'copy:angular', 'copy:boostrapMixins']);
   
   // Build task(s).
-  grunt.registerTask('build', ['less:build', 'uglify', 'jshint']);
+  grunt.registerTask('build', ['clean', 'less:build', 'uglify', 'jshint', 'copy:build']);
   
   // Build task(s).
   grunt.registerTask('serve', ['connect', 'watch']);
