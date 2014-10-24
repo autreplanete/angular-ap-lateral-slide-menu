@@ -1,0 +1,15 @@
+{
+  "name": "angular-ap-lateral-slide-menu",
+  "description": "AngularJS Lateral slide Menu",
+  "version": "0.0.1",
+  "homepage": "",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "1.2.x",
+    "angular-animate": "~1.2.x",
+    "angular-touch": "~1.2.x",
+    "angular-sanitize": "~1.2.x",
+    "bootstrap": "~3.2.x"
+  }
+}
