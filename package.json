@@ -19,7 +19,7 @@
     "grunt-shell": "^0.7.0"
   },
   "scripts": {
-    "postinstall": "bower install && grunt init",
+    "postinstall": "bower install && grunt init && grunt build",
     "prestart": "npm install",
     "start": "http-server -a 0.0.0.0 -p 8000"
   },
