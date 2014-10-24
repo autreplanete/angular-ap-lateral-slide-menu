@@ -24,7 +24,22 @@
     "start": "http-server -a 0.0.0.0 -p 8000"
   },
   "main": "Gruntfile.js",
-  "dependencies": {
+  "dependencies": {},
+  "author": "Autre planete",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/autreplanete/angular-ap-lateral-slide-menu.git"
   },
-  "author": "Autre planete"
+  "keywords": [
+    "AngularJS",
+    "Lateral",
+    "Slide",
+    "Menu",
+    "AutrePlanete"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/autreplanete/angular-ap-lateral-slide-menu/issues"
+  },
+  "homepage": "https://github.com/autreplanete/angular-ap-lateral-slide-menu"
 }
