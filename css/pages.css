@@ -6101,6 +6101,8 @@ button.close {
 /*-------------------------------------------------- */
 body {
   overflow-x: hidden;
+  position: relative;
+  font-family: 'Roboto', sans-serif;
 }
 .container {
   padding-top: 25px;
@@ -6145,16 +6147,21 @@ body {
   border: 0;
   border-radius: 0;
 }
+.navbar-default.active {
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+}
 .navbar-default .container {
   padding-top: 0;
 }
-.navbar-default .navbar-brand {
+.navbar-default .container .navbar-brand {
   color: #ffffff;
+  padding: 0;
+  margin: 0;
 }
-.navbar-default .navbar-brand img {
+.navbar-default .container .navbar-brand img {
   margin-right: 15px;
 }
-.navbar-default .navbar-brand:hover {
+.navbar-default .container .navbar-brand:hover {
   color: #ffffff;
 }
 .navbar-default #main-menu {

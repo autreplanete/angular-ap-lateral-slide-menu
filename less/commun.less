@@ -3,6 +3,8 @@
 
 body {
 	overflow-x: hidden;
+	position: relative;
+	font-family: 'Roboto', sans-serif;
 }
 
 .container {
@@ -52,12 +54,18 @@ body {
 	margin-bottom: 0;
 	border: 0;
 	border-radius: 0;
+	&.active{
+		box-shadow: 0 0 4px rgba(0,0,0,.4);
+	}
 	.container {
 		padding-top: 0;
 	}
 
-	.navbar-brand {
+
+	.container .navbar-brand {
 		color: @white;
+		padding: 0;
+		margin: 0;
 		img {
 			margin-right: 15px;
 		}

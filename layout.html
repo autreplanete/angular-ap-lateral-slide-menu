@@ -33,9 +33,10 @@
   <meta property="article:publisher" content="http://www.autreplanete.com">
   <meta property="article:published_time" content="??????">
   
-  <title></title>
+  <title>Autre Planète - Latéral Slide Menu</title>
   
 	<link rel="stylesheet" href="css/pages.css">
+  <link href='http://fonts.googleapis.com/css?family=Roboto:500,100,300,400' rel='stylesheet' type='text/css'>
   
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -48,7 +49,7 @@
   {{/block}}
 </head>
 
-<body>
+<body data-spy="scroll" data-target=".navbar">
 	
 	{{#block "menu"}}
   	{{> menu}}
@@ -85,6 +86,16 @@
 			<script src="bower_components/bootstrap/js/affix.js"></script>
 			
 			<script src="//localhost:35729/livereload.js"></script>
+
+      <script type="text/javascript">
+        $(window).scroll(function() {
+              if ( $(window).scrollTop() >= 100 ) {
+                  $('.navbar-default').addClass('active');
+              } else {
+                  $('.navbar-default').removeClass('active');
+              }
+          });
+      </script>
 		
 		{{else}}
 			<script src="js/jquery.js"></script>
