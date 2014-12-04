@@ -1,0 +1,200 @@
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm-min) {
+
+/*-------------------- Global Style ---------------- */
+/*-------------------------------------------------- */
+
+	.container {
+		padding-top: 55px;
+	}
+
+
+/*----------------------- Nav Style ----------------------*/
+/*-------------------------------------------------------*/
+
+.navbar-default {
+	background: @main-color;
+	.container {
+		padding-top: 15px;
+	}
+
+
+	#main-menu {
+		background-color: transparent;
+			.navbar-right {
+				li {
+					&.active {
+						border-radius: 10px;
+						border: 2px solid @white;
+						a {
+							background: none;
+							color: @white;
+						}
+					}
+					a {
+						font-size: 16px;
+						padding-top: 5px;
+						padding-bottom: 5px;
+						color: @white;
+						&:hover, &:focus {
+							background: none;
+							color: #333;
+						}
+					}
+				}
+			}
+	}
+}
+
+/*------------------------ Home Style ---------------------*/
+/*--------------------------------------------------------*/
+	
+	.home {
+		h1{
+			text-align: left;
+			margin-bottom: 15px;
+		}
+	}
+
+	.home-demo{
+		.home-demo-bg {
+			iframe {
+				height: 402px;
+			}
+		}
+	}
+
+/*--------------------- Themes Style -------------------*/
+/*-----------------------------------------------------*/
+
+	.themes-demo {
+		height: 400px;
+		background-size: 400px;
+					iframe{
+				height: 279px;
+				width: 370px;
+				border: 0;
+				position: relative;
+				margin-right: auto;
+				top: 61px;
+				margin-left: auto;
+				display: block;
+			}
+	}
+
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: @screen-md-min) {
+
+/*-------------------- Global Style ---------------- */
+/*-------------------------------------------------- */
+
+	.container {
+		padding-top: 75px;
+	}
+
+	
+
+/*------------------------ Home Style ---------------------*/
+/*--------------------------------------------------------*/
+	
+	.home {
+		height: 585px;
+		h1{
+			text-align: left;
+		}
+	}
+
+	.home-presentation {
+		margin-top: 90px;
+	}
+
+	.home-demo{
+		.home-demo-bg {
+			position: relative;
+			//right: -50%;
+			//top:-13px;
+			width: 703px;
+			height: 525px;
+			background-image: url("../images/dekstop.png");
+			background-repeat: no-repeat;
+			background-position: left;
+			iframe {
+				height: 449px;
+			}
+		}
+	}
+
+/*--------------------- Themes Style -------------------*/
+/*-----------------------------------------------------*/
+
+	.themes {
+		.themes-presentation {
+			float: right!important;
+		}
+		.themes-selector {
+			margin-top: 30px;
+		}
+		.themes-demo {
+			height: 400px;
+			background-size: 450px;
+			iframe{
+				height: 279px;
+				width: 370px;
+				border: 0;
+				position: relative;
+				margin-right: auto;
+				top: 61px;
+				margin-left: auto;
+				display: block;
+			}
+		}
+	}	
+
+
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: @screen-lg-min) {
+
+/*-------------------- Global Style ---------------- */
+/*-------------------------------------------------- */
+
+	.container {
+		padding-top: 75px;
+	}
+
+/*------------------------ Home Style ---------------------*/
+/*--------------------------------------------------------*/
+	
+	.home {
+		height: 585px;
+			h1{
+			text-align: left;
+		}
+	}
+
+	.home-presentation {
+		margin-top: 90px;
+	}
+
+	.home-demo{
+		.home-demo-bg {
+			position: relative;
+			//right: -50%;
+			//top:-13px;
+			width: 703px;
+			height: 525px;
+			background-image: url("../images/dekstop.png");
+			background-repeat: no-repeat;
+			background-position: left;
+			iframe {
+				height: 449px;
+				width: 702px;
+				top: 61px;
+			}
+		}
+	}
+
+}

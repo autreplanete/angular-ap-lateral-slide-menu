@@ -1,0 +1,298 @@
+/*-------------------- Global Style ---------------- */
+/*-------------------------------------------------- */
+
+body {
+	overflow-x: hidden;
+}
+
+.container {
+	padding-top: 25px;
+}
+
+/*-------------------- Button Style ---------------- */
+/*-------------------------------------------------- */
+
+.navbar-default .navbar-toggle {
+	border-color: @white;
+	&:focus, &:hover {
+		background-color: transparent;
+	}
+	.icon-bar{
+		background-color: @white;
+	}
+}
+
+.download1 {
+	display: block;
+	height: 56px;
+	width: 255px;
+	border: 0;
+	color: @white;
+	background-color: #333333;
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+.download2 {
+	display: block;
+	height: 56px;
+	width: 255px;
+	border: 0;
+	color: @white;
+	background-color: @main-color;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+/*----------------------- Nav Style ----------------------*/
+/*-------------------------------------------------------*/
+
+.navbar-default {
+	background: #333333;
+	margin-bottom: 0;
+	border: 0;
+	border-radius: 0;
+	.container {
+		padding-top: 0;
+	}
+
+	.navbar-brand {
+		color: @white;
+		img {
+			margin-right: 15px;
+		}
+		&:hover {
+			color: @white;
+		}
+	}
+
+	#main-menu {
+		background-color: @white;
+		.navbar-right {
+			li {
+				&.active a {
+					color: @main-color;
+				}
+				a {
+					font-size: 16px;
+					background: none;
+					color: #333333;
+					padding-top: 5px;
+					padding-bottom: 5px;
+					&:hover, &:focus {
+						background: none;
+						color: @main-color;
+					}
+				}
+			}
+		}
+	}
+
+			
+
+}
+
+/*------------------------ Home Style ---------------------*/
+/*--------------------------------------------------------*/
+
+.home {
+	background: @main-color;
+	overflow: hidden;
+}
+
+.home-presentation {
+	margin-top: 30px;
+	margin-bottom: 20px;
+	color: white;
+	h1{
+		text-align: center;
+	}
+	.download1 {
+		margin-right: auto;
+		margin-left: auto;		
+	}
+	.github {
+		display: block;
+		width: 255px;
+		text-align: center;
+		margin-right: auto;
+		margin-left: auto;
+		a {
+			font-size: 12px;
+			color: white;
+		}
+	}
+}
+
+.home-demo{
+
+	.home-demo-bg {
+		position: relative;
+		width: 703px;
+		height: 463px;
+		background-image: url("../images/dekstop.png");
+		background-repeat: no-repeat;
+			iframe {
+				height: 402px;
+				width: 702px;
+				border: 0;
+				position: absolute;
+				top: 61px;
+			}
+	}
+}
+
+/*--------------------- What Style ---------------------*/
+/*-----------------------------------------------------*/
+
+.what {
+	background: @white;
+	.what-presentation {
+		.download2 {
+			margin-right: auto;
+			margin-left: auto;
+		}
+	}
+	.what-demo {
+		height: 501px;
+		background-image: url("../images/mobile.png");
+		background-repeat: no-repeat;
+		background-position: center;
+			iframe {
+				height: 348px;
+				width: 232px;
+				border: 0;
+				position: relative;
+				margin-right: auto;
+				top: 75px;
+				margin-left: auto;
+				display: block;
+			}
+	}
+}
+
+/*--------------------- Themes Style -------------------*/
+/*-----------------------------------------------------*/
+
+.themes {
+	background: @white;
+	.themes-presentation {
+		margin-bottom: 30px;
+	}
+	.themes-demo {
+		//width: 550px;
+		height: 320px;
+		background-image: url("../images/tablet.png");
+		background-repeat: no-repeat;
+		background-position: center; //left before
+		background-size: 325px;
+			iframe {
+				overflow: hidden;
+				height: 201px;
+				width: 267px;
+				border: 0;
+				position: relative;
+				margin-right: auto;
+				top: 60px;
+				margin-left: auto;
+				display: block;
+			}
+	}
+	.themes-selector {
+		ul{
+			padding: 0;
+			margin: 0;
+			text-align: center;
+			li{
+				padding-top: 20px;
+				list-style: none;
+				display: inline-block;
+				margin: 0 30px;
+				width: 80px;
+				img {
+					display: block;
+					margin-left: auto;
+					margin-right: auto;
+					margin-bottom: 5px;
+				}
+			}
+		}
+	}
+}
+
+/*--------------------- How to Style -------------------*/
+/*-----------------------------------------------------*/
+
+.how-to {
+	background: @white;
+	height: 500px;
+	.console {
+		margin : 0 0 10px;
+		display: block;
+		height: 40px;
+		background-color: #333333;
+		color: @white;
+		line-height: 40px;
+		padding-left: 15px;
+	}
+}
+
+/*--------------------- footer style -------------------*/
+/*-----------------------------------------------------*/
+
+footer {
+	clear: both;
+	background: @main-color;
+	.container {
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+
+	label{
+		font-weight: 500;
+		font-family: inherit;
+		color: @white;
+		font-size: 30px;
+		display: block;
+	}
+
+
+	input {
+		padding-top: 0;
+		width: 50%;
+		height: 40px;
+		padding-left: 15px;
+		border:0;
+		display: inline-block;
+	}
+
+	button {
+		height: 40px;
+		width: 75px;
+		border: 0;
+		color: @white;
+		background-color: #333333;
+		margin-left: -4px;
+		display: inline-block;
+	}
+
+	.copyright{
+		display: block;
+		color: @white;
+		font-size: 15px;
+		clear: both;
+		margin-top: 25px;
+		a {
+			color: #333333;
+		}
+	}
+
+}
+
+
+
+
+
+
+
+
