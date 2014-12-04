@@ -114,7 +114,7 @@ module.exports = function (grunt) {
       },
       dev: {
         files: {
-          'index.html': 'index.hbs'
+          '_dev/index.html': 'index.hbs'
         }
       },
       dist: {
@@ -146,7 +146,8 @@ module.exports = function (grunt) {
         tasks: 'handlebarslayouts:dev'
       },
       options: {
-        livereload: true
+        livereload: true,
+        base:'_dev/'
       }
     },
     
@@ -161,6 +162,6 @@ module.exports = function (grunt) {
 
 
   // Default task.
-  grunt.registerTask('serve', ['connect', 'watch']);
+  grunt.registerTask('serve', ['clean:_dev', 'connect', 'watch']);
   
 };
