@@ -160,7 +160,7 @@ module.exports = function(grunt) {
   // Default task(s).
   grunt.registerTask('default', ['build']);
   
-  grunt.registerTask('init', ['clean', 'copy:angular', 'copy:boostrapMixins']);
+  grunt.registerTask('init', ['clean', 'copy:angular']);
   
   // Build task(s).
   grunt.registerTask('build', ['clean', 'less:build', 'uglify', 'jshint', 'copy:build']);
