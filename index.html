@@ -174,6 +174,15 @@
 		
 
 		<script src="js/pages.js"></script>
+    <script type="text/javascript">
+        $(window).scroll(function() {
+              if ( $(window).scrollTop() >= 100 ) {
+                  $('.navbar-default').addClass('active');
+              } else {
+                  $('.navbar-default').removeClass('active');
+              }
+          });
+    </script>
   
   
   
