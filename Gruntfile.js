@@ -131,6 +131,7 @@ module.exports = function (grunt) {
       server: {
         options: {
           port: 8000,
+          base:'_dev/',
           open: true
         }
       }
@@ -146,8 +147,7 @@ module.exports = function (grunt) {
         tasks: 'handlebarslayouts:dev'
       },
       options: {
-        livereload: true,
-        base:'_dev/'
+        livereload: true
       }
     },
     
@@ -158,10 +158,10 @@ module.exports = function (grunt) {
   
   
   // Full distribution task.
-  grunt.registerTask('dist', ['clean:dist', 'concat', 'less:dist', 'handlebarslayouts:dist']);
+  grunt.registerTask('dist', ['clean', 'concat', 'less:dist', 'handlebarslayouts:dist']);
 
 
   // Default task.
-  grunt.registerTask('serve', ['clean:_dev', 'connect', 'watch']);
+  grunt.registerTask('serve', ['less:dev', 'connect', 'watch']);
   
 };
