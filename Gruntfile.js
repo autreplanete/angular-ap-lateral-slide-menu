@@ -114,7 +114,7 @@ module.exports = function (grunt) {
       },
       dev: {
         files: {
-          '_dev/index.html': 'index.hbs'
+          'index.html': 'index.hbs'
         }
       },
       dist: {

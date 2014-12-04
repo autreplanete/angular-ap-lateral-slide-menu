@@ -1,7 +1,22 @@
 {{#extend "layout"}}
+
+	{{#append "head"}}
 		
-		{{#replace "body"}}
-		  <p>hello world</p>
-		{{/replace}}
+	{{/append}}
+
+
+	{{#replace "content"}}
+		<p>hello world</p>
+		
+		{{>hero}}
+		
+		{{>what}}
+		
+		{{>themes}}
+		
+		{{>howto}}
+		
+		
+	{{/replace}}
 		
 {{/extend}}

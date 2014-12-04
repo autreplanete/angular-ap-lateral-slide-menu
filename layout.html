@@ -49,21 +49,15 @@
 </head>
 
 <body>
-
+	
 	{{#block "menu"}}
-  {{> menu}}
+  	{{> menu}}
 	{{/block}}
-	<div id="menu-vertical-overlay"></div>
+
 	<div id="main_page">
-		{{#block "header"}}
-    <div class="main-container">
-			<header>
-				
-			</header>
-		</div>    
-		{{/block}}
   
-		{{#block "body"}}{{/block}}
+		{{#block "content"}}{{/block}}
+		
 	</div>
 	<footer>
 	{{#block "footer"}}
@@ -93,7 +87,6 @@
 		{{else}}
 			<script src="js/jquery.js"></script>
 			<script src="js/bootstrap.js"></script>
-			<script src="js/bootstrap-little-calendar.js"></script>
 		{{/if}}
 
 		<script src="js/pages.js"></script>
