@@ -111,22 +111,6 @@ module.exports = function(grunt) {
           }
         ]
       },
-      boostrapMixins: {
-        files: [
-          {
-            expand: true,
-            flatten: true,
-            src: ['bower_components/bootstrap/less/mixins.less'],
-            dest: 'src/less/bootstrap/'
-          },
-          {
-            expand: true,
-            flatten: true,
-            src: ['bower_components/bootstrap/less/mixins/*.less'],
-            dest: 'src/less/bootstrap/mixins'
-          }
-        ]
-      },
       build: {
         files: [
           {
