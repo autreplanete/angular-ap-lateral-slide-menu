@@ -916,8 +916,6 @@ img {
   vertical-align: middle;
 }
 .img-responsive,
-.thumbnail > img,
-.thumbnail a > img,
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
   display: block;
@@ -4523,70 +4521,6 @@ a.list-group-item.active > .badge,
 .nav-pills > li > a > .badge {
   margin-left: 3px;
 }
-.jumbotron {
-  padding: 30px;
-  margin-bottom: 30px;
-  color: inherit;
-  background-color: #eeeeee;
-}
-.jumbotron h1,
-.jumbotron .h1 {
-  color: inherit;
-}
-.jumbotron p {
-  margin-bottom: 15px;
-  font-size: 21px;
-  font-weight: 200;
-}
-.jumbotron > hr {
-  border-top-color: #d5d5d5;
-}
-.container .jumbotron {
-  border-radius: 6px;
-}
-.jumbotron .container {
-  max-width: 100%;
-}
-@media screen and (min-width: 768px) {
-  .jumbotron {
-    padding-top: 48px;
-    padding-bottom: 48px;
-  }
-  .container .jumbotron {
-    padding-left: 60px;
-    padding-right: 60px;
-  }
-  .jumbotron h1,
-  .jumbotron .h1 {
-    font-size: 63px;
-  }
-}
-.thumbnail {
-  display: block;
-  padding: 4px;
-  margin-bottom: 20px;
-  line-height: 1.42857143;
-  background-color: #ffffff;
-  border: 1px solid #dddddd;
-  border-radius: 4px;
-  -webkit-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-}
-.thumbnail > img,
-.thumbnail a > img {
-  margin-left: auto;
-  margin-right: auto;
-}
-a.thumbnail:hover,
-a.thumbnail:focus,
-a.thumbnail.active {
-  border-color: #428bca;
-}
-.thumbnail .caption {
-  padding: 9px;
-  color: #333333;
-}
 .alert {
   padding: 15px;
   margin-bottom: 20px;
@@ -6163,4 +6097,549 @@ button.close {
     display: none !important;
   }
 }
-/*# sourceMappingURL=pages.css.map */
+/*-------------------- Global Style ---------------- */
+/*-------------------------------------------------- */
+body {
+  overflow-x: hidden;
+}
+.container {
+  padding-top: 25px;
+}
+/*-------------------- Button Style ---------------- */
+/*-------------------------------------------------- */
+.navbar-default .navbar-toggle {
+  border-color: #ffffff;
+}
+.navbar-default .navbar-toggle:focus,
+.navbar-default .navbar-toggle:hover {
+  background-color: transparent;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #ffffff;
+}
+.download1 {
+  display: block;
+  height: 56px;
+  width: 255px;
+  border: 0;
+  color: #ffffff;
+  background-color: #333333;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.download2 {
+  display: block;
+  height: 56px;
+  width: 255px;
+  border: 0;
+  color: #ffffff;
+  background-color: #76c8d3;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+/*----------------------- Nav Style ----------------------*/
+/*-------------------------------------------------------*/
+.navbar-default {
+  background: #333333;
+  margin-bottom: 0;
+  border: 0;
+  border-radius: 0;
+}
+.navbar-default .container {
+  padding-top: 0;
+}
+.navbar-default .navbar-brand {
+  color: #ffffff;
+}
+.navbar-default .navbar-brand img {
+  margin-right: 15px;
+}
+.navbar-default .navbar-brand:hover {
+  color: #ffffff;
+}
+.navbar-default #main-menu {
+  background-color: #ffffff;
+}
+.navbar-default #main-menu .navbar-right li.active a {
+  color: #76c8d3;
+}
+.navbar-default #main-menu .navbar-right li a {
+  font-size: 16px;
+  background: none;
+  color: #333333;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.navbar-default #main-menu .navbar-right li a:hover,
+.navbar-default #main-menu .navbar-right li a:focus {
+  background: none;
+  color: #76c8d3;
+}
+/*------------------------ Home Style ---------------------*/
+/*--------------------------------------------------------*/
+.home {
+  background: #76c8d3;
+  overflow: hidden;
+}
+.home-presentation {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  color: white;
+}
+.home-presentation h1 {
+  text-align: center;
+}
+.home-presentation .download1 {
+  margin-right: auto;
+  margin-left: auto;
+}
+.home-presentation .github {
+  display: block;
+  width: 255px;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+.home-presentation .github a {
+  font-size: 12px;
+  color: white;
+}
+.home-demo .home-demo-bg {
+  position: relative;
+  width: 703px;
+  height: 463px;
+  background-image: url("../images/dekstop.png");
+  background-repeat: no-repeat;
+}
+.home-demo .home-demo-bg iframe {
+  height: 402px;
+  width: 702px;
+  border: 0;
+  position: absolute;
+  top: 61px;
+}
+/*--------------------- What Style ---------------------*/
+/*-----------------------------------------------------*/
+.what {
+  background: #ffffff;
+}
+.what .what-presentation .download2 {
+  margin-right: auto;
+  margin-left: auto;
+}
+.what .what-demo {
+  height: 501px;
+  background-image: url("../images/mobile.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.what .what-demo iframe {
+  height: 348px;
+  width: 232px;
+  border: 0;
+  position: relative;
+  margin-right: auto;
+  top: 75px;
+  margin-left: auto;
+  display: block;
+}
+/*--------------------- Themes Style -------------------*/
+/*-----------------------------------------------------*/
+.themes {
+  background: #ffffff;
+}
+.themes .themes-presentation {
+  margin-bottom: 30px;
+}
+.themes .themes-demo {
+  height: 320px;
+  background-image: url("../images/tablet.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 325px;
+}
+.themes .themes-demo iframe {
+  overflow: hidden;
+  height: 201px;
+  width: 267px;
+  border: 0;
+  position: relative;
+  margin-right: auto;
+  top: 60px;
+  margin-left: auto;
+  display: block;
+}
+.themes .themes-selector ul {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+.themes .themes-selector ul li {
+  padding-top: 20px;
+  list-style: none;
+  display: inline-block;
+  margin: 0 30px;
+  width: 80px;
+}
+.themes .themes-selector ul li img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5px;
+}
+/*--------------------- How to Style -------------------*/
+/*-----------------------------------------------------*/
+.how-to {
+  background: #ffffff;
+  height: 500px;
+}
+.how-to .console {
+  margin: 0 0 10px;
+  display: block;
+  height: 40px;
+  background-color: #333333;
+  color: #ffffff;
+  line-height: 40px;
+  padding-left: 15px;
+}
+/*--------------------- footer style -------------------*/
+/*-----------------------------------------------------*/
+footer {
+  clear: both;
+  background: #76c8d3;
+}
+footer .container {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+footer label {
+  font-weight: 500;
+  font-family: inherit;
+  color: #ffffff;
+  font-size: 30px;
+  display: block;
+}
+footer input {
+  padding-top: 0;
+  width: 50%;
+  height: 40px;
+  padding-left: 15px;
+  border: 0;
+  display: inline-block;
+}
+footer button {
+  height: 40px;
+  width: 75px;
+  border: 0;
+  color: #ffffff;
+  background-color: #333333;
+  margin-left: -4px;
+  display: inline-block;
+}
+footer .copyright {
+  display: block;
+  color: #ffffff;
+  font-size: 15px;
+  clear: both;
+  margin-top: 25px;
+}
+footer .copyright a {
+  color: #333333;
+}
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  /*-------------------- Global Style ---------------- */
+  /*-------------------------------------------------- */
+  .container {
+    padding-top: 55px;
+  }
+  /*----------------------- Nav Style ----------------------*/
+  /*-------------------------------------------------------*/
+  .navbar-default {
+    background: #76c8d3;
+  }
+  .navbar-default .container {
+    padding-top: 15px;
+  }
+  .navbar-default #main-menu {
+    background-color: transparent;
+  }
+  .navbar-default #main-menu .navbar-right li.active {
+    border-radius: 10px;
+    border: 2px solid #ffffff;
+  }
+  .navbar-default #main-menu .navbar-right li.active a {
+    background: none;
+    color: #ffffff;
+  }
+  .navbar-default #main-menu .navbar-right li a {
+    font-size: 16px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: #ffffff;
+  }
+  .navbar-default #main-menu .navbar-right li a:hover,
+  .navbar-default #main-menu .navbar-right li a:focus {
+    background: none;
+    color: #333;
+  }
+  /*------------------------ Home Style ---------------------*/
+  /*--------------------------------------------------------*/
+  .home h1 {
+    text-align: left;
+    margin-bottom: 15px;
+  }
+  .home-demo .home-demo-bg iframe {
+    height: 402px;
+  }
+  /*--------------------- Themes Style -------------------*/
+  /*-----------------------------------------------------*/
+  .themes-demo {
+    height: 400px;
+    background-size: 400px;
+  }
+  .themes-demo iframe {
+    height: 279px;
+    width: 370px;
+    border: 0;
+    position: relative;
+    margin-right: auto;
+    top: 61px;
+    margin-left: auto;
+    display: block;
+  }
+}
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  /*-------------------- Global Style ---------------- */
+  /*-------------------------------------------------- */
+  .container {
+    padding-top: 75px;
+  }
+  /*------------------------ Home Style ---------------------*/
+  /*--------------------------------------------------------*/
+  .home {
+    height: 585px;
+  }
+  .home h1 {
+    text-align: left;
+  }
+  .home-presentation {
+    margin-top: 90px;
+  }
+  .home-demo .home-demo-bg {
+    position: relative;
+    width: 703px;
+    height: 525px;
+    background-image: url("../images/dekstop.png");
+    background-repeat: no-repeat;
+    background-position: left;
+  }
+  .home-demo .home-demo-bg iframe {
+    height: 449px;
+  }
+  /*--------------------- Themes Style -------------------*/
+  /*-----------------------------------------------------*/
+  .themes .themes-presentation {
+    float: right!important;
+  }
+  .themes .themes-selector {
+    margin-top: 30px;
+  }
+  .themes .themes-demo {
+    height: 400px;
+    background-size: 450px;
+  }
+  .themes .themes-demo iframe {
+    height: 279px;
+    width: 370px;
+    border: 0;
+    position: relative;
+    margin-right: auto;
+    top: 61px;
+    margin-left: auto;
+    display: block;
+  }
+}
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  /*-------------------- Global Style ---------------- */
+  /*-------------------------------------------------- */
+  .container {
+    padding-top: 75px;
+  }
+  /*------------------------ Home Style ---------------------*/
+  /*--------------------------------------------------------*/
+  .home {
+    height: 585px;
+  }
+  .home h1 {
+    text-align: left;
+  }
+  .home-presentation {
+    margin-top: 90px;
+  }
+  .home-demo .home-demo-bg {
+    position: relative;
+    width: 703px;
+    height: 525px;
+    background-image: url("../images/dekstop.png");
+    background-repeat: no-repeat;
+    background-position: left;
+  }
+  .home-demo .home-demo-bg iframe {
+    height: 449px;
+    width: 702px;
+    top: 61px;
+  }
+}
+.home {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .home {
+    float: left;
+    width: 100%;
+  }
+}
+.home .home-presentation {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .home .home-presentation {
+    float: left;
+    width: 50%;
+  }
+}
+.home .home-demo {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .home .home-demo {
+    float: left;
+    width: 50%;
+  }
+}
+.what {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .what {
+    float: left;
+    width: 100%;
+  }
+}
+.what .what-presentation {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .what .what-presentation {
+    float: left;
+    width: 50%;
+  }
+}
+.what .what-demo {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .what .what-demo {
+    float: left;
+    width: 50%;
+  }
+}
+.themes {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .themes {
+    float: left;
+    width: 100%;
+  }
+}
+.themes .themes-presentation {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .themes .themes-presentation {
+    float: left;
+    width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  .themes .themes-presentation {
+    float: left;
+    width: 50%;
+  }
+}
+.themes .themes-demo {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .themes .themes-demo {
+    float: left;
+    width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  .themes .themes-demo {
+    float: left;
+    width: 50%;
+  }
+}
+.themes .themes-selector {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .themes .themes-selector {
+    float: left;
+    width: 100%;
+  }
+}
+.how-to {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .how-to {
+    float: left;
+    width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  .how-to {
+    float: left;
+    width: 100%;
+  }
+}

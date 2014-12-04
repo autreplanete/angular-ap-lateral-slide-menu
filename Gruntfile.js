@@ -20,19 +20,19 @@ module.exports = function (grunt) {
       },
       html5shiv: { 
         expand: true,
-        cwd: 'bower_components/html5shiv/dist',
+        cwd: 'bower_components/html5shiv/dist/',
         src: '*.js',
         dest: 'js/'
       },
       modernizr: {
         expand: true,
-        cwd: 'bower_components/modernizr',
+        cwd: 'bower_components/modernizr/',
         src: 'modernizr.js',
         dest: 'js/'
       },
       svgInjector: {
         expand: true,
-        cwd: 'bower_components/svg-injecto',
+        cwd: 'bower_components/svg-injecto/',
         src: '*.js',
         dest: 'js/'
       },
@@ -44,9 +44,13 @@ module.exports = function (grunt) {
       },
       glyphicons: {
         expand: true,
-        cwd: 'bower_components/bootstrap/fonts',
+        cwd: 'bower_components/bootstrap/fonts/',
         src: '*',
         dest: 'fonts'
+      },
+      dev: {
+      	src: ['bower_components/**/*', 'js/**/*', 'images/**/*', 'fonts/**/*'],
+        dest: '_dev/'
       }
     },
     
@@ -94,7 +98,7 @@ module.exports = function (grunt) {
       dist: {
         options: {
           strictMath: true,
-          sourceMap: true,
+          sourceMap: false,
           outputSourceFiles: true,
           sourceMapURL: 'pages.css.map',
           sourceMapFilename: '_dev/css/pages.css.map'
@@ -142,6 +146,10 @@ module.exports = function (grunt) {
         files: 'less/**/*.less',
         tasks: 'less:dev'
       },
+      layout: {
+        files: 'layout.html',
+        tasks: 'handlebarslayouts:dev'
+      },
       hsb: {
         files: '**/*.hbs',
         tasks: 'handlebarslayouts:dev'
@@ -156,12 +164,11 @@ module.exports = function (grunt) {
   // Default task.
   grunt.registerTask('default', ['dist']);
   
-  
   // Full distribution task.
-  grunt.registerTask('dist', ['clean', 'concat', 'less:dist', 'handlebarslayouts:dist']);
+  grunt.registerTask('dist', ['clean:dist', 'copy', 'concat', 'less:dist', 'handlebarslayouts:dist']);
 
 
   // Default task.
-  grunt.registerTask('serve', ['less:dev', 'connect', 'watch']);
+  grunt.registerTask('serve', ['copy:dev', 'less:dev', 'connect', 'watch']);
   
 };
