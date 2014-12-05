@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, target-densitydpi=device-dpi, minimal-ui" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="white-translucent">
+
+        <link rel="stylesheet" type="text/css" href="css/theme-medium.css" />
+        <link href='http://fonts.googleapis.com/css?family=Roboto:400,500' rel='stylesheet' type='text/css'>
+
+        <meta name="msapplication-tap-highlight" content="no" />
+        <style>
+          body {
+            -ms-zoom: 0.725;
+            -moz-transform: scale(0.725);
+            -moz-transform-origin: 0 0;
+            -o-transform: scale(0.725);
+            -o-transform-origin: 0 0;
+            -webkit-transform: scale(0.725);
+            -webkit-transform-origin: 0 0;
+          }
+        </style>
+        <title>Menu Medium Style</title>
+    </head>
+
+    <body ng-app="myApp" lateral-slide-menu-controller >
+
+          <!-- MENU -->
+          <lateral-slide-menu ng-cloak>
+              
+            <ul>
+              <li><a href="#" class="selected">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Demo</a></li>
+              <li><a href="#">How to use</a></li>
+              <li><a href="#">Profil</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          
+          </lateral-slide-menu>
+          
+          <!-- main page -->
+          <div class="main-page lateral-slide-menu-main-page">
+            <a href="" class="toggle-menu" lateral-slide-menu-toggle></a>
+          </div>
+
+
+        <!-- script -->
+
+        <script type="text/javascript" src="lib/angular/angular.js"></script>
+
+       <script type="text/javascript" src="lib/angular/angular-animate.js"></script>
+
+        <script type="text/javascript" src="js/angular-ap-lateral-slide-menu.js"></script>
+
+        <script type="text/javascript" src="js/app.js"></script>
+
+    </body>
+</html>

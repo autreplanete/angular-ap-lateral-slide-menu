@@ -47,6 +47,9 @@ body {
   height: auto;
 }
 */
+body {
+  margin:0; 
+}
 .lateral-slide-menu-scrollable-container {
   display: none;
   overflow: auto;
@@ -172,5 +175,11 @@ body {
   height: 28px;
   background: url("../images/menu-normal.png") no-repeat;
   background-size: 100% 100%;
+}
+.main-page {
+  background-color: #ffffff;
+  min-height: 1280px;
+  margin: 0;
+  padding: 8px;
 }
 /*# sourceMappingURL=angular-ap-lateral-slide-menu.css.map */

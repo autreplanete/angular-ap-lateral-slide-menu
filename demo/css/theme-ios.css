@@ -41,12 +41,16 @@
 *               (    |                                                                
 * 
  */
-/* 
 body {
-  overflow: auto;
-  height: auto;
+  -ms-zoom: 0.725;
+  -moz-transform: scale(0.725);
+  -moz-transform-origin: 0 0;
+  -o-transform: scale(0.725);
+  -o-transform-origin: 0 0;
+  -webkit-transform: scale(0.725);
+  -webkit-transform-origin: 0 0;
+  margin: 0;
 }
-*/
 .lateral-slide-menu-scrollable-container {
   display: none;
   overflow: auto;
@@ -175,5 +179,11 @@ body {
   height: 28px;
   background: url("../images/menu-normal.png") no-repeat;
   background-size: 100% 100%;
+}
+.main-page {
+  background-color: #ffffff;
+  min-height: 1280px;
+  margin: 0;
+  padding: 8px;
 }
 /*# sourceMappingURL=angular-ap-lateral-slide-menu.css.map */
