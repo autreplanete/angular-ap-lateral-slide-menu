@@ -6370,6 +6370,9 @@ footer .copyright a {
   .navbar-default .container {
     padding-top: 15px;
   }
+  .navbar-default .container .navbar-brand {
+    line-height: normal;
+  }
   .navbar-default #main-menu {
     background-color: transparent;
   }
