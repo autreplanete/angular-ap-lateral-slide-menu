@@ -6157,6 +6157,7 @@ body {
   color: #ffffff;
   padding: 0;
   margin: 0;
+  line-height: 45px;
 }
 .navbar-default .container .navbar-brand img {
   margin-right: 15px;
