@@ -1,0 +1,192 @@
+/*!
+ * angular-ap-lateral-slide-menu v0.0.1 (https://github.com/autreplanete/angular-ap-lateral-slide-menu)
+ * Copyright 1994-2014 Autre planete
+* 
+*            .                                     .                                  
+* .  *               *   *             .                          .       .       *   
+*        .  *                     *   *    .  *      ,:      .        *     .    .    
+*                           *                      ,' |     .     *                   
+*  *   .        *       .       .       *         /   :                               
+*                                              --'   /                .         .     
+*     .  *                       *              / />/                                 
+*             *                                / <//_\                 .     -o-      
+*  *   .         \:/    .       .       *   __/   /                                   
+*                 O                         )'-. /             .                .     
+*                    .                      ./  :\                                    
+*        *   .                .             /.' '                                     
+*                                          '/'       .  *           *                 
+*               .                         +                    .                      
+*       *                     .           '                                .          
+*                                       `.                                            
+*               *                   .-"-             .                       .        
+*                                  (    |                                             
+*           .                   . .-'  '.                          *                  
+*                              ( (.   )A:                                             
+*                          .'    / (_  )                                  -o-         
+*                           _. :(.   )AP  `                 .                         
+*     *   .            .  (  `-' (  `.   .                                            
+*                        .  :  (   .APx)                                              
+*                       /_`( "a `a. )"'                                               
+*                   (  (/  .  ' )=='       .  *                             *         
+*                  (   (    )  .A"   +                                                
+*                    (`'AP.( _(   (                                                   
+*                 ..-. `AP    ) `  )  +                                               
+*               -'   (      +aP:  )                                                   
+*             '    _  `    (AP.cx                    *                                
+*           _(    (    )b  -`.  ) +                                                   
+*           )/    (AP   (AP    )  )                                                   
+*           (  (/  .  ' )  ' ) )                                                      
+*            .  (  `-' (  `.  .                                                       
+*            ( (.   )    )                                                            
+*               (    |                                                                
+* 
+ */
+/* 
+body {
+  overflow: auto;
+  height: auto;
+}
+*/
+.lateral-slide-menu-scrollable-container {
+  display: none;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  height: 100%;
+  -webkit-transform: translateX(-40px);
+  -ms-transform: translateX(-40px);
+  -o-transform: translateX(-40px);
+  transform: translateX(-40px);
+  -webkit-transition: -webkit-transform 160ms, opacity 160ms;
+  -moz-transition: -moz-transform 160ms, opacity 160ms;
+  -o-transition: -o-transform 160ms, opacity 160ms;
+  transition: transform 160ms, opacity 160ms;
+  -khtml-opacity: 0.5;
+  -moz-opacity: 0.5;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+.lateral-slide-menu-scrollable-container::-webkit-scrollbar {
+  display: none;
+}
+.lateral-slide-menu-toggle:focus {
+  outline: none;
+}
+.lateral-slide-menu-overlay {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 600;
+}
+.lateral-slide-menu-main-page {
+  -webkit-transition: -webkit-transform 192ms cubic-bezier(0.2, 0.3, 0.25, 0.9);
+  -moz-transition: -moz-transform 192ms cubic-bezier(0.2, 0.3, 0.25, 0.9);
+  -o-transition: -o-transform 192ms cubic-bezier(0.2, 0.3, 0.25, 0.9);
+  transition: transform 192ms cubic-bezier(0.2, 0.3, 0.25, 0.9);
+  z-index: 800;
+}
+.lateral-slide-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  outline: none;
+}
+.lateral-slide-menu-in-transition {
+  overflow: hidden;
+  height: 100%;
+}
+.lateral-slide-menu-in-transition .lateral-slide-menu {
+  position: fixed;
+  z-index: auto;
+}
+.lateral-slide-menu-in-transition .lateral-slide-menu-scrollable-container {
+  display: block;
+  width: 250px;
+}
+.lateral-slide-menu-is-open .lateral-slide-menu-overlay {
+  display: block;
+}
+.lateral-slide-menu-is-open .lateral-slide-menu-overlay,
+.lateral-slide-menu-is-open .lateral-slide-menu:focus ~ .lateral-slide-menu-overlay {
+  left: 250px;
+  z-index: 900;
+}
+.lateral-slide-menu-is-open .lateral-slide-menu-main-page {
+  -webkit-animation-duration: 320ms;
+  animation-duration: 320ms;
+  -webkit-transform: translate3d(250px, 0, 0);
+  transform: translate3d(250px, 0, 0);
+}
+.lateral-slide-menu-is-open .lateral-slide-menu-scrollable-container {
+  -webkit-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+  transform: none;
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+body {
+  overflow: auto;
+  height: auto;
+  margin: 0;
+}
+.lateral-slide-menu {
+  background-color: #191918;
+  font-size: 13px;
+  /* ========== LISTE DES LIENS : + styles des liens en bas ======================= */
+  /* ============================================================================== */
+  /* Styles des liens de la navigation */
+}
+.lateral-slide-menu ul {
+  list-style: none;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.lateral-slide-menu a {
+  font-family: 'Roboto', sans-serif;
+  font-size: 17px;
+  height: 50px;
+  line-height: 53px;
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+  padding-left: 10px;
+  text-decoration: none;
+  box-sizing: border-box;
+  color: #999999;
+}
+.lateral-slide-menu a.selected {
+  color: #ffffff;
+}
+.lateral-slide-menu a:active {
+  color: #52A4D4;
+}
+.lateral-slide-menu a:before {
+  position: relative;
+  top: 8px;
+  margin: 0 10px 0 11px;
+}
+.toggle-menu {
+  display: block;
+  width: 28px;
+  height: 28px;
+  background: url("../images/menu-normal.png") no-repeat;
+  background-size: 100% 100%;
+}
+.main-page {
+  background-color: #ffffff;
+  min-height: 1280px;
+  margin: 0;
+  padding: 8px;
+}
+/*
+.lateral-slide-menu-is-open .lateral-slide-menu-overlay {
+   background-color: black;
+   opacity: .5;
+}
+*/
+/*# sourceMappingURL=angular-ap-lateral-slide-menu.css.map */

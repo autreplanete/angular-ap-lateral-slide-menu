@@ -91,6 +91,22 @@ module.exports = function(grunt) {
       dev: {
         src: 'src/less/<%= pkg.name %>.less',
         dest: 'src/css/<%= pkg.name %>.css'
+      },
+      themeMedium: {
+        src: 'demo/less/theme-medium.less',
+        dest: 'demo/css/theme-medium.css'
+      },
+      themeIos: {
+        src: 'demo/less/theme-ios.less',
+        dest: 'demo/css/theme-ios.css'
+      },
+      themeAndroid: {
+        src: 'demo/less/theme-android.less',
+        dest: 'demo/css/theme-android.css'
+      },
+      themeBlueMoon: {
+        src: 'demo/less/theme-blue-moon.less',
+        dest: 'demo/css/theme-blue-moon.css'
       }
     },
     
@@ -148,7 +164,7 @@ module.exports = function(grunt) {
     watch: {
       less: {
         files: ['demo/less/**/*.less', 'demo/**/*.html', 'demo/js/**/*.js'],
-        tasks: ['less:dev', 'jshint']
+        tasks: ['less:dev', 'less:themeMedium', 'less:themeIos', 'less:themeAndroid', 'less:themeBlueMoon', 'jshint']
       },
       options: {
         livereload: true

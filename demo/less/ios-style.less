@@ -1,0 +1,58 @@
+.lateral-slide-menu {
+	background-color: #ffffff;
+	font-size: 13px;
+
+	/* ========== LISTE DES LIENS : + styles des liens en bas ======================= */
+	/* ============================================================================== */
+
+	ul {
+		list-style: none;
+		width: 100%;
+		margin: 0;
+		padding: 0;
+	}
+
+	li {
+		border-bottom: 1px solid #e9e9e9;
+	}
+	
+
+	/* Styles des liens de la navigation */
+
+	a {
+		font-family: 'Roboto', sans-serif;
+		font-size: 17px;
+		height: 50px;
+		line-height: 53px;
+		display: inline-block;
+		vertical-align: middle;
+		width: 100%;
+		padding-left: 10px;
+		text-decoration: none;
+		box-sizing: border-box;
+		color: #333333;
+
+		&.selected {
+			color: #0088cc;
+			background: #F9F9F9;
+		}
+
+		&:active {
+			color: #0088cc;
+		}
+
+		&:before {
+			position: relative;
+			top: 8px;
+			margin: 0 10px 0 11px;
+		}
+	}
+}
+
+.toggle-menu {
+	display: block;
+	width: 28px;
+	height: 28px;
+	background: url("../images/menu-normal.png") no-repeat;
+	background-size: 100% 100%;
+}
