@@ -1,0 +1,58 @@
+.lateral-slide-menu {
+	background-color: #76c8d3;
+	font-size: 13px;
+
+	/* ========== LISTE DES LIENS : + styles des liens en bas ======================= */
+	/* ============================================================================== */
+
+	ul {
+		list-style: none;
+		width: 100%;
+		margin: 0;
+		padding: 0;
+	}
+
+	li {
+		//border-bottom: 1px solid #ffffff;
+	}
+	
+
+	/* Styles des liens de la navigation */
+
+	a {
+		font-family: 'Roboto', sans-serif;
+		font-size: 17px;
+		height: 50px;
+		line-height: 53px;
+		display: inline-block;
+		vertical-align: middle;
+		width: 100%;
+		padding-left: 10px;
+		text-decoration: none;
+		box-sizing: border-box;
+		color: #ffffff;
+
+		&.selected {
+			color: #ffffff;
+			background: #90D5DB;
+		}
+
+		&:active {
+			color: #52A4D4;
+		}
+
+		&:before {
+			position: relative;
+			top: 8px;
+			margin: 0 10px 0 11px;
+		}
+	}
+}
+
+.toggle-menu {
+	display: block;
+	width: 28px;
+	height: 28px;
+	background: url("../images/menu-normal.png") no-repeat;
+	background-size: 100% 100%;
+}
