@@ -151,6 +151,17 @@ module.exports = function(grunt) {
       }
     },
     
+    plato: {
+      build: {
+        options : {
+          exclude: /\.min\.js$/    // excludes source files finishing with ".min.js"
+        },
+        files: {
+          'report': ['src/**/*.js']
+        }
+      }
+    },
+    
     connect: {
       server: {
         options: {
@@ -179,7 +190,7 @@ module.exports = function(grunt) {
   grunt.registerTask('init', ['clean', 'copy:angular']);
   
   // Build task(s).
-  grunt.registerTask('build', ['clean', 'less:build', 'uglify', 'jshint', 'copy:build']);
+  grunt.registerTask('build', ['clean', 'less:build', 'uglify', 'jshint', 'copy:build', 'plato']);
   
   // Build task(s).
   grunt.registerTask('serve', ['connect', 'watch']);
