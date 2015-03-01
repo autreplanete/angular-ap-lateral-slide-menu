@@ -48,8 +48,14 @@ module.exports = function (grunt) {
         src: '*',
         dest: 'fonts'
       },
+      demo: {
+        expand: true,
+        cwd: '../angular-ap-lateral-slide-menu/demo/',
+        src: '*',
+        dest: 'demo/'
+      },
       dev: {
-      	src: ['bower_components/**/*', 'js/**/*', 'images/**/*', 'fonts/**/*'],
+      	src: ['bower_components/**/*', 'js/**/*', 'images/**/*', 'fonts/**/*', 'demo/**/*'],
         dest: '_dev/'
       }
     },
