@@ -1,8 +1,8 @@
 (function(){
 
 	"use strict";
-
 	var app = angular.module('ap.lateralSlideMenu', []);
+	var StatusBar = StatusBar || false;
 	
 	app.constant('menuConfig', {
 		openClass: 'lateral-slide-menu-is-open',
@@ -13,6 +13,7 @@
 		var openScope = null;
 
 		this.open = function( menuScope ) {
+			if (window.StatusBar !== undefined) StatusBar.hide();
 			if ( !openScope ) {
 				$document.bind('click', closeMenu);
 				$document.bind('keydown', escapeKeyBind);
@@ -31,6 +32,7 @@
 				$document.unbind('click', closeMenu);
 				$document.unbind('keydown', escapeKeyBind);
 			}
+			if (window.StatusBar !== undefined) StatusBar.show();
 		};
 
 		var closeMenu = function( event ) {
@@ -207,11 +209,15 @@
 			}
 		});
 		
-		/*
-		$scope.$on('$routeChangeStart', function (event, next) {
+		//  angularjs $route
+		$scope.$on('$routeChangeSuccess', function () {
     	scope.isOpen = false;
     });
-    */
+    
+    //  angularjs angular-ui/ui-router
+    $scope.$on('$stateChangeSuccess', function() {
+			scope.isOpen = false;
+		});
 
 		$scope.$on('$locationChangeSuccess', function() {
 			scope.isOpen = false;
