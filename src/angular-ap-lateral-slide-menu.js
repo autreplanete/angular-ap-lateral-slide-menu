@@ -427,8 +427,9 @@
                     if (tapElement) {
                       tapElement.blur();
                     }
-
-                    if (!angular.isDefined(attr.disabled) || attr.disabled === false) {
+                    
+                    // Explicitely disabled
+                    if (angular.isDefined(attrs.disabled) && attrs.disabled === false) {
                       element.triggerHandler('click', [event]);
                     }
                   }
